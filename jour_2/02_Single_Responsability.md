@@ -1,7 +1,10 @@
 # Chap 2 : Single Responsability
 
-> **Note**
+> **Principe**
+>
 > *Une classe ne de­vrait être mo­di­fiée que pour une seule raison.*
+>
+
 
 Es­sayez de faire en sorte qu’une classe ne soit res­pon­sable que d’une par­tie d’une fonc­tion­na­lité de votre lo­gi­ciel, et en­cap­su­lez cette res­pon­sa­bi­lité en­tiè­re­ment dans la classe.
 

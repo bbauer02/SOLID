@@ -1,6 +1,7 @@
 # Chap 3 : Open/Closed Principle
 
-> **Note**
+> **Principe**
+>
 > *Les classes doi­vent être ou­vertes à l’ex­ten­sion, mais fer­mées à la modification.*
 
 L’idée prin­ci­pale de ce prin­cipe est d’évi­ter de créer des bugs dans du code exis­tant lorsque vous ajou­tez de nou­velles fonc­tion­na­li­tés.
