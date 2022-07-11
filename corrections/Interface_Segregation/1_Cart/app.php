@@ -1,24 +1,20 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
+spl_autoload_register(function ($class) {
+    include __DIR__ . '/' . $class . '.php';
+});
 
-use Cart\{Product,StorageArray, StorageSession, Cart };
+/*
+*
+Vous pouvez tester le code avec psysh en ligne de commande en chargeant le contexte de app.php
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+psysh app.php
 
-// $cart = new Cart(new StorageArray);
-$cart = new Cart(new StorageSession);
+$products = [ new Book( name : 'Retour à Killybegs', price :10, isbn : "1234"), new Music( name : "AC/DC", price : 19 ), new Bike( name : "Brompton", price :1500 ) ];
 
-$products = [
-    'apple' => new Product('apple', 10.5),
-    'raspberry' => new Product('raspberry', 13.),
-    'orange' => new Product('orange', 7.5),
-];
+$cart = new Cart;
+// avec des quantités aléatoires 
+foreach( $products as $p ) $cart->buy($p, rand(1, 10)) ;
 
-// extrait chaque clé en créant la variable clé ayant la valeur de cette clé.
-extract($products);
-
-$cart->buy($apple, 3);
-
-var_dump($cart->total());
+echo $cart->total();
+*/
